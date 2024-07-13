@@ -1,0 +1,246 @@
+.body1 {
+    background-image: url('—Pngtree—romantic red love tree under_887981.png');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    font-family: Arial, sans-serif;
+    color: #EB1C22; /* Change text color for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.One {
+    min-height: 100vh;
+    background-color: #111;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    margin: 0px;
+    padding:0;
+    font-family: 'Poppins' , sans-serif;
+    height: 1000px;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.banner .content{
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+#sid{
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px #fff4f5;
+    opacity: 0.75;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+#sid p{
+    text-align: center;
+    font-size: 18px;
+    padding: 4px;
+}
+
+.banner .content h1{
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.banner .content p{
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.s1 {
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+    animation: fadeInOut 3s linear infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+}
+
+.s1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('heart-1.png');
+    background-size: cover;
+    animation: moveShape 3s linear infinite;
+}
+
+@keyframes moveShape {
+    0% {
+        transform: translate(0) rotate(0deg);
+    }
+    100% {
+        transform: translate(300px) rotate(360deg);
+    }
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    /* opacity: 0.50;
+    background-color: aliceblue; */
+    border-radius: 50px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px #FEEAEC;
+    opacity: 0.999;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+#note {
+    text-align: center; /* Center align text */
+    margin: 0;
+    padding: 0;
+}
+
+.inputLabel{
+    height: 30px;
+    width:400px;
+}
+
+input::placeholder{
+    opacity: 0.75;
+}
+
+hr{
+    list-style: none;
+    border: none;
+}
+
+.title {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.emoji {
+    margin: 10px 0;
+    font-size: 1.5em; /* Adjust font size for emojis */
+}
+
+#check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #EB1C22;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+}
+
+#result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold;
+    font-size: 40px;
+    font-weight: 900;
+    opacity: 1;
+}
+
+.titles span {
+    font-size: 38px;
+    --duration: 0.8s; /* Default duration */
+    --delay: 0s; /* Default delay */
+    position: relative;
+    display: block;
+    color: transparent;
+    overflow: hidden;
+    animation: revealText var(--duration) calc(var(--duration) + var(--delay)) forwards;
+}
+
+.titles span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #952938;
+    animation: rollIn var(--duration) var(--delay) forwards,
+               rollOut var(--duration) calc(var(--duration) + var(--delay)) forwards;
+}
+
+.titles span:nth-child(2)::after {
+    border-top: 3px solid #952938;
+}
+
+@keyframes revealText {
+    to {
+        color: #e4e2e2;
+    }
+}
+
+@keyframes rollIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rollOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(205%);
+    }
+}
